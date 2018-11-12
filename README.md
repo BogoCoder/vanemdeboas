@@ -3,6 +3,6 @@ Project for Algorithms and Data Structures course of Applied Mathematics and Com
 
 Developed by:
 
-
 Samuel Pérez
+
 Nicolás Duque
