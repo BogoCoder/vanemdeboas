@@ -4,40 +4,27 @@ using namespace std;
 
 #include <iostream>
 #include <math.h>
- 
+
+
 class proto_vEB {
 public:
-	void operator()(const int & u); // u = universe size
+	void operator()(const size_t & u); // u = universe size
+	int high(int x);
+
+	int low(int x);
+
+	size_t u;
+	int * A;
+	proto_vEB** cluster;
+
+private:
+
 };
 
-template <typename datatype>
 class vEB {
-	private:
-		/*size_t count;
-		vEBC *root;
+public:
+	int member(proto_vEB  V, int x);
 
-		vEBC * min() const;
-		vEBC * max() const;
-		vEBC * succ() const;
-		vEBC * pred() const;
-
-		void remove();
-		void clear(vEBC *root);
-		void insert(vEBC * &root);
-		vEBC * find(vEBC *root, datatype key) const;*/
-		
-
-	public:
-		/*vEB();
-		vEB(const vEB & rhs);
-		~vEB();
-		void remove(datatype key);
-		bool empty(void) const;
-		bool member(vEB * ts);
-		void clear(void);
-		size_t size(void) const;
-		bool find(datatype key) const;
-		void insert(datatype key);*/
 };
 
 #endif //_vEB_hpp_
