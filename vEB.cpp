@@ -3,48 +3,114 @@
 
 #include "vEB.hpp"
 
-void proto_vEB::operator()(const size_t & usize) 
+proto_vEB::proto_vEB(const size_t & usize)
 {
 	u = usize;
-	cout << u << endl;
-	int sqrtu = sqrt(u);
+	//cout << u << endl;
+	
+	if(u % 2 != 0) throw invalid_argument("usize should be 2^2^k for some integer k >= 1");
 	if(u == 2) {
 		A = new int[2];
-		for(int i = 0; i < 2; ++i) cout << A[i];
-		cout << endl;
+		//for(int i = 0; i < 2; ++i) cout << A[i];
+		//cout << endl;
 	}
 
 	else { 
 
-		proto_vEB * summary = new proto_vEB;
-		(*summary)(sqrtu);
+		int sqrtu = sqrt(u);
 
+		summary = new proto_vEB(sqrtu);
 		cluster = new proto_vEB* [sqrtu];
 		for(int i =0; i < sqrtu; ++i) {
-			cluster[i] = new proto_vEB;
-			(*cluster[i])(sqrtu);
+			cluster[i] = new proto_vEB(sqrtu);
 			//cout << cluster[i] << " ";
 		}
-		cout << endl;
+		//cout << endl;
 	}
 }
 
-int proto_vEB::high(int x){
-	return x/sqrt(u);
+int proto_vEB::high(const int x) const 
+{
+	//cout << "\nhigh: " << static_cast<int>(floor(x/sqrt(u))) << endl;
+	return static_cast<int>(floor(x/sqrt(u)));
 }
 
-int proto_vEB::low(int x){
-	return (int)(x % (int)floor(sqrt(u)));
+int proto_vEB::low(const int x) const 
+{
+	int sqrtu = sqrt(u);
+	//cout << "\nlow: " << (x % sqrtu) << endl;
+	return (x % sqrtu);
 }
 
-int vEB::member(proto_vEB  V, int x){
+int proto_vEB::index(const int x, const int y) const 
+{
+	int sqrtu = sqrt(u);
+	//cout << "\nindex: " << (x*sqrtu) + y << endl;
+	return (x*sqrtu) + y;
+}
 
-	if(V.u == 2)
+
+int proto_vEB::member(const int x) const {
+
+	//cout << x << endl;
+	if(u == 2)
 	{
-		return V.A[x];
+		return A[x];
 	}
 
-	else return member(*V.cluster[V.high(x)], V.low(x));
+	else return cluster[high(x)]->member(low(x));
+}
+
+int proto_vEB::min() const {
+
+	if(u == 2) {
+		if(A[0] == 1) return 0;
+		else if (A[1] == 1) return 1;
+		else return -1;
+	}
+	else 
+	{
+		int min_cluster = summary->min();
+
+		if(min_cluster == -1) return -1;
+		else {
+			int offset = cluster[min_cluster]->min();
+			return index(min_cluster, offset);
+		}
+	}
+}
+
+int proto_vEB::succ(const int x) const {
+
+	if(u == 2) {
+		if(x == 0 && A[1] == 1) return 1;
+		else return -1;
+	}
+
+	else 
+	{
+		int offset = cluster[high(x)]->succ(low(x));
+		if(offset != -1) return index(high(x), offset);
+		else{
+			int succ_cluster = summary->succ(high(x));
+			if(succ_cluster == -1) return -1;
+			else{
+				offset = cluster[succ_cluster]->min();
+				return index(succ_cluster, offset);
+			}
+		}
+
+	}
+}
+
+
+void proto_vEB::insert(const int x) {
+
+	if(u == 2) A[x] = 1;
+	else{
+		cluster[high(x)]->insert(low(x));
+		summary->insert(high(x));
+	}
 }
 
 #endif //_vEB_cpp_

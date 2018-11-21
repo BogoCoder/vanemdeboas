@@ -4,11 +4,23 @@ using namespace std;
 
 int main() {
 
-	proto_vEB proto;
-	proto(16);
+	proto_vEB proto(16);
 
-	vEB lol;
-	cout << "MEMBER: " << lol.member(proto, 4) << endl;
+	cout << "\nINSERTING... " << endl;
+	proto.insert(1);
+	proto.insert(2);
+	proto.insert(3);
+	proto.insert(4);
+	proto.insert(5);
+	proto.insert(7);
+	proto.insert(14);
+	proto.insert(15);
+
+	cout << "\nMEMBER: " << proto.member(6) << endl;
+
+	cout << "\nMIN: " << proto.min() << endl;
+
+	cout << "\nSUCC: " << proto.succ(14) << endl;
 
 	return 0;
 }

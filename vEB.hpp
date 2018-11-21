@@ -7,24 +7,29 @@ using namespace std;
 
 
 class proto_vEB {
-public:
-	void operator()(const size_t & u); // u = universe size
-	int high(int x);
 
-	int low(int x);
+	public:
 
-	size_t u;
-	int * A;
-	proto_vEB** cluster;
+		proto_vEB();
+		proto_vEB(const size_t & usize); // u = universe size
 
-private:
+		int member(const int x) const;
+		int min() const;
+		int succ(const int x) const;
+		void insert(const int x);
+		void remove(const int x);
 
-};
 
-class vEB {
-public:
-	int member(proto_vEB  V, int x);
+	private:
 
+		int high(const int x) const;
+		int low(const int x) const;
+		int index(const int x, const int y) const;
+
+		size_t u;
+		int * A;
+		proto_vEB * summary;
+		proto_vEB* * cluster;
 };
 
 #endif //_vEB_hpp_
