@@ -113,4 +113,23 @@ void proto_vEB::insert(const int x) {
 	}
 }
 
+void proto_vEB::remove(const int x)
+{
+	if(u == 2) A[x] = 0;
+	else {
+        cluster[high(x)]->remove(low(x));
+        
+        int count = 0, beg = static_cast<int>(high(x)*sqrt(u)), end = static_cast<int>((high(x) + 1)*sqrt(u));
+        std::cout << "REMOVE:" << beg << " " << end << " " << high(x) << " " << u<< std::endl;
+        
+        for(int i = beg; i < end; ++i){
+            count+=cluster[high(x)]->member(low(i));
+            std::cout << i << " ";
+            std::cout<< cluster[high(x)]->member(low(i)) << std::endl;
+        }
+        std::cout << "COUNT " << count << std::endl;
+        if(count == 0) summary->remove(high(x));
+	}  
+}
+
 #endif //_vEB_cpp_
