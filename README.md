@@ -13,7 +13,7 @@ The data structures implemented here are:
 - <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" /> : A prototype for the van Emde Boas Tree.
 - <img src="https://latex.codecogs.com/gif.latex?\texttt{vEB}" title="\texttt{vEB}" /> : The real van Emde Boas Tree.
 
-You can find the implementations in the respectives folders, the <img src="https://latex.codecogs.com/gif.latex?\texttt{BST}" title="\texttt{BST}" /> (Binary Search Tree) implementations are only used for testing.
+You can find the implementations in the respectives folders, the <img src="https://latex.codecogs.com/gif.latex?\texttt{BST}" title="\texttt{BST}" /> (Binary Search Tree) implementations are only used for time testing.
 
 ### Doc
 
@@ -21,9 +21,16 @@ You can find the implementations in the respectives folders, the <img src="https
 	
   This is a brief summary of the operations implemented in the <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" />  data structure, we will show the worst-case complexity too:
 
-  - <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB(u)}" title="\texttt{proto\_vEB(u)}" /> : Constructor, it receives u argument which refers to the universe size. <img src="https://latex.codecogs.com/gif.latex?O(u)" title="O(u)" />
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB(u)}" title="\texttt{proto\_vEB(u)}" /> : Constructor, it receives u argument which refers to the universe size.  <img src="https://latex.codecogs.com/gif.latex?O(u)" title="O(u)" />
 
-  - <img src="https://latex.codecogs.com/gif.latex?\texttt{min()}" title="\texttt{min(u)}" /> : Finds and returns the minimun element of the structure. <img src="https://latex.codecogs.com/gif.latex?$\theta(\lg&space;u)" title="$\theta(\lg u)" />
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{min()}" title="\texttt{min()}" /> : Finds and returns the minimun element of the structure.  <img src="https://latex.codecogs.com/gif.latex?$\theta(\lg&space;u)" title="$\theta(\lg u)" />
+
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{max()}" title="\texttt{max()}" /> : Finds and returns the maximum element of the structure.  <img src="https://latex.codecogs.com/gif.latex?$\theta(\lg&space;u)" title="$\theta(\lg u)" />
+
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{succ(x)}" title="\texttt{succ(x)}" /> : Finds the successor of the element x.  <img src="https://latex.codecogs.com/gif.latex?O(\lg&space; u \lg&space;\lg&space;u)" title="O(\lg u \lg \lg u)" />
+
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{pred(x)}" title="\texttt{pred(x)}" /> : Finds the predecessor of the element x.  <img src="https://latex.codecogs.com/gif.latex?O(\lg&space; u \lg&space;\lg&space;u)" title="O(\lg u \lg \lg u)" />  
+
 
 
 
