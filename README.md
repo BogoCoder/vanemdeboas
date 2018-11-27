@@ -2,8 +2,7 @@
 
 Project for Algorithms and Data Structures course of Applied Mathematics and Computer Science Major at Universidad del Rosario.
 
-The van Emde Boas Tree is an advanced data structure which supports <a><img src="https://latex.codecogs.com/gif.latex?O(\lg&space;\lg&space;u)" title="O(\lg \lg u)" /></a>.
-
+The van Emde Boas Tree is an advanced data structure which supports each of the dynamic set operations - <img src="https://latex.codecogs.com/gif.latex?\texttt{INSERT}" title="\texttt{INSERT}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{REMOVE}" title="\texttt{REMOVE}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MEMBER}" title="\texttt{MEMBER}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MINIMUM}" title="\texttt{MINIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MAXIMUM}" title="\texttt{MAXIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{SUCCESSOR}" title="\texttt{SUCCESSOR}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{PREDECESSOR}" title="\texttt{PREDECESSOR}" />, in - <img src="https://latex.codecogs.com/gif.latex?O(\lg&space;\lg&space;u)" title="O(\lg \lg u)" /> time.
 ## Getting Started
 
 
