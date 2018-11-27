@@ -10,7 +10,7 @@ The van Emde Boas Tree is an advanced data structure which supports each of the 
 
 The data structures implemented here are: 
 
-- <img src="https://latex.codecogs.com/gif.latex?\texttt{proto_vEB}" title="\texttt{proto_vEB}" /> : A prototype for the van Emde Boas Tree.
+- <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" /> : A prototype for the van Emde Boas Tree.
 - <img src="https://latex.codecogs.com/gif.latex?\texttt{vEB}" title="\texttt{vEB}" /> The real van Emde Boas Tree.
 
 You can find the implementations in the respectives folders, the <img src="https://latex.codecogs.com/gif.latex?\texttt{BST}" title="\texttt{BST}" /> (Binary Search Tree) implementations are only used for testing.
@@ -22,7 +22,7 @@ You will need to include the hpp file to use the data structure:
 <img src="https://latex.codecogs.com/gif.latex?\texttt{#include "vEB.hpp"}" title="\texttt{#include "vEB.hpp"}" /> 
 ```
 ```
-<img src="https://latex.codecogs.com/gif.latex?\texttt{#include "proto_vEB.hpp"}" title="\texttt{#include "proto_vEB.hpp"}" /> 
+<img src="https://latex.codecogs.com/gif.latex?\texttt{#include "proto\_vEB.hpp"}" title="\texttt{#include "proto\_vEB.hpp"}" /> 
 ```
 
 ### Installing
