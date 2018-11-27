@@ -4,25 +4,36 @@ Project for Algorithms and Data Structures course of Applied Mathematics and Com
 
 The van Emde Boas Tree is an advanced data structure which supports each of the dynamic set operations - <img src="https://latex.codecogs.com/gif.latex?\texttt{INSERT}" title="\texttt{INSERT}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{REMOVE}" title="\texttt{REMOVE}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MEMBER}" title="\texttt{MEMBER}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MINIMUM}" title="\texttt{MINIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MAXIMUM}" title="\texttt{MAXIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{SUCCESSOR}" title="\texttt{SUCCESSOR}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{PREDECESSOR}" title="\texttt{PREDECESSOR}" /> -, in <img src="https://latex.codecogs.com/gif.latex?O(\lg&space;\lg&space;u)" title="O(\lg \lg u)" /> time.
 
-## Getting Started
+## How to use the data structure
 
-### Prerequisites
+### Preliminaries
 
 The data structures implemented here are: 
 
 - <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" /> : A prototype for the van Emde Boas Tree.
-- <img src="https://latex.codecogs.com/gif.latex?\texttt{vEB}" title="\texttt{vEB}" /> The real van Emde Boas Tree.
+- <img src="https://latex.codecogs.com/gif.latex?\texttt{vEB}" title="\texttt{vEB}" /> : The real van Emde Boas Tree.
 
 You can find the implementations in the respectives folders, the <img src="https://latex.codecogs.com/gif.latex?\texttt{BST}" title="\texttt{BST}" /> (Binary Search Tree) implementations are only used for testing.
 
+### Doc
+
+<img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" /> : 
+	
+	This is a brief summary of the operations implemented in the <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" />  data structure, we will show the worst-case complexity too:
+
+
+
+
+### Prerequisites
+
 You will need, obviously, C++ compiler. If you wanna use the data structure, you will need both hpp and cpp files of the respective data structure.
 
-You will need to include the hpp file to use the data structure: 
+You will need to include the hpp file in your main to use the data structure: 
 ```
-<img src="https://latex.codecogs.com/gif.latex?\texttt{#include "vEB.hpp"}" title="\texttt{#include "vEB.hpp"}" /> 
+#include "vEB.hpp"
 ```
 ```
-<img src="https://latex.codecogs.com/gif.latex?\texttt{#include "proto\_vEB.hpp"}" title="\texttt{#include "proto\_vEB.hpp"}" /> 
+#include "proto\_vEB.hpp"
 ```
 
 ### Installing
