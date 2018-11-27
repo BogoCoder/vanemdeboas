@@ -1,6 +1,7 @@
 # van Emde Boas Trees
 
-Bogotá D.C. - Colombia
+Bogotá D.C.,Colombia
+
 November 2018
 
 Project for Algorithms and Data Structures course of Applied Mathematics and Computer Science Major at Universidad del Rosario.
