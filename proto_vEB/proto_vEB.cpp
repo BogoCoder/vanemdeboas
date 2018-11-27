@@ -1,6 +1,7 @@
 #ifndef _proto_vEB_cpp_
 #define _proto_vEB_cpp_
 
+/* Constructor, it receives u argument which refers to the universe size. O(u)*/
 proto_vEB::proto_vEB(const size_t & usize) /* usize should be 2^2^k for some integer k >= 1 */
 {
 	u = usize;
@@ -67,6 +68,7 @@ int proto_vEB::member(const int x) const {
 	else return cluster[high(x)]->member(low(x));
 }
 
+/*  Finds and returns the minimun element of the structure. θ(lg u) */
 int proto_vEB::min() const {
 
 	if(u == 2) {
@@ -87,6 +89,7 @@ int proto_vEB::min() const {
 	}
 }
 
+/* Finds and returns the miximun element of the structure. θ(lg u) */
 int proto_vEB::max() const {
 
 	if(u == 2) {
@@ -106,7 +109,8 @@ int proto_vEB::max() const {
 		}
 	}
 }
-
+ 
+/* Finds the successor of the element x. θ(lg u lglg u)*/
 int proto_vEB::succ(const int x) const {
 
 	if(u == 2) {
@@ -131,6 +135,7 @@ int proto_vEB::succ(const int x) const {
 	}
 }
 
+/* Finds the predecessor of the element x. θ(lg u lglg u) */
 int proto_vEB::pred(const int x) const {
 
 	if(u == 2) {
@@ -154,11 +159,14 @@ int proto_vEB::pred(const int x) const {
 		}
 	}
 }
-
+ 
+/* Returns the number of elements of the structure. O(1) */
 size_t proto_vEB::size() const {return count;}
 
+/* Returns 1 if the structure is empty, or 0 otherwise O(1) */
 bool proto_vEB::empty() const {return count == 0;}
 
+/* Inserts element x to the structure O(lg u) */
 void proto_vEB::insert(const int x) 
 {
 	if(u == 2) A[x] = 1;
@@ -177,6 +185,7 @@ void proto_vEB::insert(const int x)
 	count++;
 }
 
+/*  Removes element x of the structure O(lg u) */
 void proto_vEB::remove(const int x)
 {
 	if(u == 2) A[x] = 0;
@@ -189,7 +198,6 @@ void proto_vEB::remove(const int x)
         
         for(int i = beg; i < end; ++i)
             elem_cluster += cluster[high(x)]->member(low(i));
-
     	if(elem_cluster == 0) summary->remove(high(x));*/
 
     	int elem_cluster = cluster[high(x)]->count;
@@ -202,6 +210,7 @@ void proto_vEB::remove(const int x)
 	count--;
 }
 
+/* Clears the structure. O(lg u)*/
 void proto_vEB::clear(){
 	//cout << u << endl;
 
