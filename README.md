@@ -19,7 +19,11 @@ You can find the implementations in the respectives folders, the <img src="https
 
 <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" /> : 
 	
-	This is a brief summary of the operations implemented in the <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" />  data structure, we will show the worst-case complexity too:
+  This is a brief summary of the operations implemented in the <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB}" title="\texttt{proto\_vEB}" />  data structure, we will show the worst-case complexity too:
+
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB(u)}" title="\texttt{proto\_vEB(u)}" /> : Constructor, it receives u argument which refers to the universe size. <img src="https://latex.codecogs.com/gif.latex?O(u)" title="O(u)" />
+
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{min()}" title="\texttt{min(u)}" /> : Finds and returns the minimun element of the structure. <img src="https://latex.codecogs.com/gif.latex?$\theta(\lg&space;u)" title="$\theta(\lg u)" />
 
 
 
