@@ -6,7 +6,7 @@ One Paragraph of project description goes here
 
 Project for Algorithms and Data Structures course of Applied Mathematics and Computer Science Major at Universidad del Rosario.
 
-The van Emde Boas Tree is an advanced data structure which supports - <img src="https://latex.codecogs.com/gif.latex?O(\log \log $u$)" /> 
+The van Emde Boas Tree is an advanced data structure which supports <a href="https://www.codecogs.com/eqnedit.php?latex=O(\lg&space;\lg&space;u)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(\lg&space;\lg&space;u)" title="O(\lg \lg u)" /></a>
 
 ### Prerequisites
 
