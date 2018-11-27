@@ -1,6 +1,7 @@
 #ifndef _vEB_cpp_
 #define _vEB_cpp_
 
+/* Constructor, it receives u argument which refers to the universe size. O(u) */
 vEB::vEB(const size_t & usize) /* usize should be 2^k for some integer k > 0 */
 {
 	int lowsqrtu = static_cast<int>(pow(2,floor(log2(usize)/2)));
@@ -23,6 +24,8 @@ vEB::vEB(const size_t & usize) /* usize should be 2^k for some integer k > 0 */
 	}
 }
 
+
+/* Destructor */
 vEB::~vEB()
 {
 	minv = -1;
@@ -32,6 +35,7 @@ vEB::~vEB()
 	delete summary;
 	delete[] cluster;
 }
+
 
 int vEB::high(const int x) const 
 {
@@ -54,7 +58,7 @@ int vEB::index(const int x, const int y) const
 	return (x*lowsqrtu) + y;
 }
 
-
+/* Return a true if the set contain the element */ 
 bool vEB::member(const int x) const {
 
 	if(x == minv or x == maxv)
@@ -66,15 +70,18 @@ bool vEB::member(const int x) const {
 	else return cluster[high(x)]->member(low(x));
 }
 
+/* Finds and returns the minimun element of the structure. O(1) /
 int vEB::min() const {
 
 	return minv;
 }
 
+/* Finds and returns the maximum element of the structure. O(1) */
 int vEB::max() const {
 	return maxv;
 }
 
+/* Finds the successor of the element x. O(lglg u) */
 int vEB::succ(const int x) const {
 
 	if(u == 2) {
@@ -103,6 +110,7 @@ int vEB::succ(const int x) const {
 	}
 }
 
+/* Finds the predecessor of the element x. O(lglg u)*/
 int vEB::pred(const int x) const {
 
 	if(u == 2) {
@@ -134,8 +142,10 @@ int vEB::pred(const int x) const {
 	}
 }
 
+/* Returns the number of elements of the structure. O(1)*/
 size_t vEB::size() const {return count;}
 
+/*  Returns TRUE if the structure is empty, or FALSE otherwise. O(1)*/
 bool vEB::empty() const {return count == 0;}
 
 void vEB::emptyinsert(const int x) 
@@ -144,6 +154,7 @@ void vEB::emptyinsert(const int x)
 	maxv = x;
 }
 
+/* Inserts element x to the structure. O(lglg u) */
 void vEB::insert(int x) 
 {
 	if(minv == -1) emptyinsert(x);
@@ -171,6 +182,7 @@ void vEB::insert(int x)
 	count++;
 }
 
+/* Removes element x of the structure. O(lglg u)*/
 void vEB::remove(int x)
 {
 	if(minv == maxv) 
@@ -215,7 +227,7 @@ void vEB::remove(int x)
 	count--;
 }
 
-
+/*Clears the structure. O(lg u)*/
 void vEB::clear()
 {
 	minv = -1;
