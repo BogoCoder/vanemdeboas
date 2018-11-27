@@ -2,17 +2,27 @@
 
 Project for Algorithms and Data Structures course of Applied Mathematics and Computer Science Major at Universidad del Rosario.
 
-The van Emde Boas Tree is an advanced data structure which supports each of the dynamic set operations - <img src="https://latex.codecogs.com/gif.latex?\texttt{INSERT}" title="\texttt{INSERT}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{REMOVE}" title="\texttt{REMOVE}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MEMBER}" title="\texttt{MEMBER}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MINIMUM}" title="\texttt{MINIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MAXIMUM}" title="\texttt{MAXIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{SUCCESSOR}" title="\texttt{SUCCESSOR}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{PREDECESSOR}" title="\texttt{PREDECESSOR}" />, in - <img src="https://latex.codecogs.com/gif.latex?O(\lg&space;\lg&space;u)" title="O(\lg \lg u)" /> time.
+The van Emde Boas Tree is an advanced data structure which supports each of the dynamic set operations - <img src="https://latex.codecogs.com/gif.latex?\texttt{INSERT}" title="\texttt{INSERT}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{REMOVE}" title="\texttt{REMOVE}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MEMBER}" title="\texttt{MEMBER}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MINIMUM}" title="\texttt{MINIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{MAXIMUM}" title="\texttt{MAXIMUM}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{SUCCESSOR}" title="\texttt{SUCCESSOR}" />, <img src="https://latex.codecogs.com/gif.latex?\texttt{PREDECESSOR}" title="\texttt{PREDECESSOR}" /> -, in <img src="https://latex.codecogs.com/gif.latex?O(\lg&space;\lg&space;u)" title="O(\lg \lg u)" /> time.
+
 ## Getting Started
-
-
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+The data structures implemented here are: 
 
+- <img src="https://latex.codecogs.com/gif.latex?\texttt{proto_vEB}" title="\texttt{proto_vEB}" /> : A prototype for the van Emde Boas Tree.
+- <img src="https://latex.codecogs.com/gif.latex?\texttt{vEB}" title="\texttt{vEB}" /> The real van Emde Boas Tree.
+
+You can find the implementations in the respectives folders, the <img src="https://latex.codecogs.com/gif.latex?\texttt{BST}" title="\texttt{BST}" /> (Binary Search Tree) implementations are only used for testing.
+
+You will need, obviously, C++ compiler. If you wanna use the data structure, you will need both hpp and cpp files of the respective data structure.
+
+You will need to include the hpp file to use the data structure: 
 ```
-Give examples
+<img src="https://latex.codecogs.com/gif.latex?\texttt{#include "vEB.hpp"}" title="\texttt{#include "vEB.hpp"}" /> 
+```
+```
+<img src="https://latex.codecogs.com/gif.latex?\texttt{#include "proto_vEB.hpp"}" title="\texttt{#include "proto_vEB.hpp"}" /> 
 ```
 
 ### Installing
