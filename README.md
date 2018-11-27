@@ -26,7 +26,7 @@ You can find the implementations in the respectives folders, the <img src="https
 
   - <img src="https://latex.codecogs.com/gif.latex?\texttt{proto\_vEB(u)}" title="\texttt{proto\_vEB(u)}" /> : Constructor, it receives u argument which refers to the universe size.  <img src="https://latex.codecogs.com/gif.latex?O(u)" title="O(u)" />
 
-  - <img src="https://latex.codecogs.com/gif.latex?\texttt{min()}" title="\texttt{min()}" /> : Finds and returns the minimun element of the structure.  <img src="https://latex.codecogs.com/gif.latex?$\theta(\lg&space;u)" title="$\theta(\lg u)" />
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{min()}" title="\texttt{min()}" /> : Finds and returns the minimum element of the structure.  <img src="https://latex.codecogs.com/gif.latex?$\theta(\lg&space;u)" title="$\theta(\lg u)" />
 
   - <img src="https://latex.codecogs.com/gif.latex?\texttt{max()}" title="\texttt{max()}" /> : Finds and returns the maximum element of the structure.  <img src="https://latex.codecogs.com/gif.latex?$\theta(\lg&space;u)" title="$\theta(\lg u)" />
 
@@ -50,7 +50,7 @@ You can find the implementations in the respectives folders, the <img src="https
 
   - <img src="https://latex.codecogs.com/gif.latex?\texttt{vEB(u)}" title="\texttt{vEB(u)}" /> : Constructor, it receives u argument which refers to the universe size.  <img src="https://latex.codecogs.com/gif.latex?O(u)" title="O(u)" />
 
-  - <img src="https://latex.codecogs.com/gif.latex?\texttt{min()}" title="\texttt{min()}" /> : Finds and returns the minimun element of the structure.  <img src="https://latex.codecogs.com/gif.latex?O(1)" title="O(1)" />
+  - <img src="https://latex.codecogs.com/gif.latex?\texttt{min()}" title="\texttt{min()}" /> : Finds and returns the minimum element of the structure.  <img src="https://latex.codecogs.com/gif.latex?O(1)" title="O(1)" />
 
   - <img src="https://latex.codecogs.com/gif.latex?\texttt{max()}" title="\texttt{max()}" /> : Finds and returns the maximum element of the structure.  <img src="https://latex.codecogs.com/gif.latex?O(1)" title="O(1)" />
 
@@ -78,78 +78,51 @@ You will need to include the hpp file in your main to use the data structure:
 #include "vEB.hpp"
 ```
 ```
-#include "proto\_vEB.hpp"
+#include "proto_vEB.hpp"
 ```
 
-### Installing
+### Running the tests
 
-A step by step series of examples that tell you how to get a development env running
+There are a few number of tests, programmed in the respectives main.cpp, this tests compares BST usual data structure and (proto)van Emde Boas Trees.
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Linux:
 
 ```
-until finished
+g++ -std=c++14 main.cpp
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+```
+./a.out
+```
+This will show you a comparison between the time of the BST operations and (proto)vEB operations.
 
-## Running the tests
+## How to start
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+To initialize a new structure of type proto_vEB or vEB you just need to:
 
 ```
-Give an example
+proto_vEB proto(x); 
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
+or
 
 ```
-Give an example
+vEB proto(x); 
 ```
+## Tools
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* C++
+* Cormen, Thomas H., Leiserson, Charles E., Rivest, Ronald L. and Stein, Clif-
+ford. (2009). Introduction to Algorithms. Tercera edición. MIT Press.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Samuel Pérez** - *Student* - [BogoCoder](https://github.com/BogoCoder)
+* **Nicolás Duque** - *Student* - [nicolasduque-10](https://github.com/nicolasduque-10)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Supervisor: **Prof. Julián Rincón**
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* A cool data structure to learn!
 
