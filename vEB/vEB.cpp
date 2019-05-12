@@ -70,7 +70,7 @@ bool vEB::member(const int x) const {
 	else return cluster[high(x)]->member(low(x));
 }
 
-/* Finds and returns the minimun element of the structure. O(1) /
+/* Finds and returns the minimun element of the structure. O(1) */
 int vEB::min() const {
 
 	return minv;
